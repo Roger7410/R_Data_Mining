@@ -1,0 +1,18 @@
+{
+    "contents" : "library(MASS)\nlibrary(ISLR)\nhead(Boston)\nBoston\nfix(Boston)\nnames(Boston)\n?Boston\nmedv\nlm.fit=lm(medv~lstat,data=Boston)\nattach(Boston)\nlm.fit\nsummary(lm.fit)\nlm.fit$coefficients\nnames(lm.fit)\ncoef(lm.fit)\nlm.fit$qr\nconfint(lm.fit)\npredict(lm.fit,data.frame(lstat=(c(5,10,15))),interval=\"confidence\")\npredict(lm.fit,data.frame(lstat=(c(5,10,15))),interval=\"prediction\")\nplot(lstat,medv)\nabline(lm.fit)\nabline(lm.fit,lwd=3,col=\"red\")\nplot(lstat,medv,col=\"red\")\nplot(lstat,medv,pch=20)\nplot(lstat,medv,pch=\"+\")\nplot(1:20,1:20,pch=1:20)\npar(mfrow=c(2,2))\nplot(lm.fit)\nplot(predict(lm.fit),residuals(lm.fit))\nplot(predict(lm.fit),rstudent(lm.fit))\nplot(hatvalues(lm.fit))\nwhich.max(hatvalues(lm.fit))\nlibrary(car)\nvif(lm.fit)\n\nLoad=function(){\n  library(ISLR)\n  library(MASS)\n  print(\"The libraries have been loaded\")\n}\nLoad()\n",
+    "created" : 1444103968030.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "765059976",
+    "id" : "3BA45160",
+    "lastKnownWriteTime" : 1444164715,
+    "path" : "~/codes/R/lab3_6/test.R",
+    "project_path" : "test.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

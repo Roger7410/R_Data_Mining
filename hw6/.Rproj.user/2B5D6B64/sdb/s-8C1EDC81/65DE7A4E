@@ -1,0 +1,18 @@
+{
+    "contents" : "set.seed(2)\nnewiris<-iris\nhead(newiris)\nnewiris$Species<-NULL\nkm.out<-kmeans(df,3,nstart=20)\ntable(iris$Species,km.out$cluster)\n#\nset.seed(1)\nsamp<-sample(1:150, 40)\nsmalliris<-newiris[samp,]\ndist<-dist(smalliris)\nhc.comp<-hclust(dist(smalliris),method=\"complete\")\nplot(hc.comp,hang=-1,labels=iris$Species[samp])\ngroups<-cutree(hc.comp,k=3)\ntable(clusters=groups,true=iris$Species[samp])\n\nset.seed(1)\nsamp<-sample(1:150, 40)\nsmalliris<-newiris[samp,]\ndist<-dist(smalliris)\nhc.comp<-hclust(dist(smalliris),method=\"average\")\nplot(hc.comp,hang=-1,labels=iris$Species[samp])\ngroups<-cutree(hc.comp,k=3)\ntable(clusters=groups,true=iris$Species[samp])\n\nset.seed(1)\nsamp<-sample(1:150, 40)\nsmalliris<-newiris[samp,]\ndist<-dist(smalliris)\nhc.comp<-hclust(dist(smalliris),method=\"single\")\nplot(hc.comp,hang=-1,labels=iris$Species[samp])\ngroups<-cutree(hc.comp,k=3)\ntable(clusters=groups,true=iris$Species[samp])\n\n",
+    "created" : 1447957730201.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3811016436",
+    "id" : "65DE7A4E",
+    "lastKnownWriteTime" : 1448002642,
+    "path" : "~/codes/R/hw6/clustering_lab.R",
+    "project_path" : "clustering_lab.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

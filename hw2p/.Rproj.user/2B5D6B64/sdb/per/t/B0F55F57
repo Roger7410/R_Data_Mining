@@ -1,0 +1,17 @@
+{
+    "contents" : "#size9\nmeans9<-rep(NA,10000)\nfor (i in 1:10000){\n  samp9<-rexp(9,rate=.1)  \n  means9[i]<-mean(samp9)\n}\n#2\nmean(means9)\nsd(means9)\npnorm(7,9.973941,3.331934)\n#2a\nmean(rexp(10000,rate=.1))\nsd(rexp(10000,rate=.1))\npnorm(7,10,3.333333)\n\n#size64\nmeans64<-rep(NA,10000)\nfor (i in 1:10000){\n  samp64<-rexp(64,rate=.1)  \n  means64[i]<-mean(samp64)\n}\n#2\nmean(means64)\nsd(means64)\npnorm(7,10.00652,1.255525)\n#2a\npnorm(7,10,10/8)\n\npar(mfrow=c(2,2))\nhist(rexp(10000,rate=.1),breaks=50,xlim=c(0,8))\nhist(means9,breaks=50,xlim=c(0,8))\n",
+    "created" : 1441842801100.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4004638564",
+    "id" : "B0F55F57",
+    "lastKnownWriteTime" : 1441844024,
+    "path" : "~/codes/R/hw2/hw_class_1-7_sep3.R",
+    "project_path" : null,
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

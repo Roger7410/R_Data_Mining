@@ -1,0 +1,17 @@
+{
+    "contents" : "df<-read.csv(\"temperatures.csv\")\ndf\nhead(df)\nhist(df$temp,breaks=50)\ntapply(df$temp,df$gender,mean)\ntapply(df$temp,df$gender,summary)\nmen<-df$temp[df$gender==\"Male\"]\nwomen<-df$temp[df$gender==\"Female\"]\npar(mfrow=c(2,1))\nhist(men,breaks=30)\nhist(women,breaks=30)\n\n#boxplot(df$temp - df$gender)\nt.test(men,conf.level=0.95)$conf.int\nmean(men)  #x = 98.10\nsd(men)    #s =.6987558\nlength(men)# n = 65(degrees of freedom = 64)\n\nqqnorm(men)\nt.test(men,mu=98.6)# mu is the hypothesis\n#our sample data lines 5.7 standard dev below the hypothesisd mean\n#p-value\nt.test(men,mu=98.1)\n#if p-value <0.05 alot,  reject Ho ",
+    "created" : 1441907707827.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "609821804",
+    "id" : "6A130F08",
+    "lastKnownWriteTime" : 1441756110,
+    "path" : "~/codes/R/t-distribution/Untitled.R",
+    "project_path" : null,
+    "properties" : {
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

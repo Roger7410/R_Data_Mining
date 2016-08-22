@@ -1,0 +1,18 @@
+{
+    "contents" : "x<- c(1,2)\nls()\nrm(x)\n\nx=matrix(data=c(1,2,3,4), nrow=2, ncol=2)\nx\nx=rnorm(50)\ny=x+rnorm(50,mean=50,sd=.1)\nz<-rnorm(50,mean=50,sd=.1)\ny\nz<-z+x\nz\ncor(x,y)\na<-rnorm(50,5,1)\nb<-a+rnorm(50,10,1)\ncor(a,b)\nset.seed(1303)\nrnorm(50)\nx=rnorm(100)\ny=rnorm(100)\nplot(x,y)\nplot(x,y,xlab=\"this is the x-axis\",ylab=\"this is the y-axis\",\n       main=\"Plot of X vs Y\")\npdf(\"figure.pdf\")\nplot(x,y,col=\"green\")\ndev.off()\nx=seq(-pi,pi,length=50)\nx\ny=x\nf=outer(x,y,function (x,y)cos(y)/(1+x^2))\ncontour (x,y,f)\ncontour(x,y,f,nlevels=45,add=T)\nfa=(f-t(f))/2\ncontour(x,y,fa,nlevels=15)\nimage(x,y,fa)\npersp(x,y,fa)\npersp(x,y,fa,theta=30)\npersp(x,y,fa,theta=30,phi=20) \npersp(x,y,fa,theta=30,phi=70) \npersp(x,y,fa,theta=30,phi=40)\nA=matrix(1:16,4,4)\nA\nA[2,3]\nA[c(1,3),c(2,4)]\nA[1:3,2:4]\nA[1:2,]\nA[,1:2]\nAuto=read.table(\"Auto.data\",header=T,na.strings=\"?\")\nAuto=read.csv(\"Auto.csv\",header=T,na.strings =\"?\")\nplot(cylinders , mpg)\n",
+    "created" : 1442999197953.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3255774313",
+    "id" : "8DCF4284",
+    "lastKnownWriteTime" : 1443040988,
+    "path" : "~/codes/R/hw4/2.3lab_practice.R",
+    "project_path" : "2.3lab_practice.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

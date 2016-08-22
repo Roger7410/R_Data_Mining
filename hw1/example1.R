@@ -1,0 +1,10 @@
+x <- c(1,2,3,4,5,6)
+y <- x^2
+print(y)
+mean(y)
+var(y)
+lm_1 <- lm(y ~ x)
+print(lm_1)
+summary(lm_1)
+par(mfrow=c(2,2))
+plot(lm_1)

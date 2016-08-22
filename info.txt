@@ -1,0 +1,6 @@
+	
+A short one here: http://www.r-tutor.com/r-introduction/data-frame
+
+and a longer one here: http://ww2.coastal.edu/kingw/statistics/R-tutorials/dataframes.html.
+
+My examples from class are posted in the files section here: data_frames.pdf

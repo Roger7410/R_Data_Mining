@@ -1,0 +1,18 @@
+{
+    "contents" : "auto<-read.csv(\"Auto.csv\",na.strings=\"?\")\nhead(auto)\nattach(auto)\nlmm_h<-lm(mpg~horsepower)\nsummary(lmm_h)\npredict(lmm_h, data.frame(horsepower=(c(98))))\npredict(lmm_h, data.frame(horsepower=(c(98))), interval = \"confidence\")\npredict(lmm_h, data.frame(horsepower=(c(98))), interval = \"prediction\")\npar(mfrow=c(2,2))\nplot(lmm_h)\nabline(lmm_h)\nplot(horsepower,mpg)\nabline(lmm_h,col=\"blue\")\n\nplot(auto, panel=panel.smooth)\npairs(auto)\nplot(auto)\nhead(auto)\ntmp<-auto[,c(-9)]\nhead(tmp)\nauto2<-read.csv(\"Auto.csv\",na.strings=\"?\")\ncor(auto2[,-9])\nhorsepower\nfit<-lm(mpg~.-name,data=auto2)\nsummary(fit)\npar(mfrow=c(2,2))\nplot(fit)\nfit<-lm(mpg~.+cylinders:displacement+displacement*horsepower+cylinders*horsepower-name+weight:year+weight:cylinders,data=auto2)\nsummary(fit)\nfit<-lm(mpg~.+log(cylinders)+sqrt(displacement)+I(horsepower^2)-name,data=auto2)\nsummary(fit)\n",
+    "created" : 1444164748057.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2363404240",
+    "id" : "1A86C670",
+    "lastKnownWriteTime" : 1444174200,
+    "path" : "~/codes/R/hw5/89.R",
+    "project_path" : "89.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

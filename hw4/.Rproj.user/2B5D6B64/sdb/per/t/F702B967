@@ -1,0 +1,18 @@
+{
+    "contents" : "Auto=read.csv(\"Auto.csv\",header=T,na.strings =\"?\")\nfix(Auto)\ndim(Auto)\nAuto=na.omit(Auto)\nattach(Auto)\nrange(Auto$mpg)\n\nsapply(Auto[, 1:8], range)\nsapply(Auto[, 1:8], mean)\nsapply(Auto[, 1:8], sd)\n\nAuto2<-Auto[-(10:85),]\nAuto2\nhead(Auto2,10)\ndim(Auto2)\n\nsapply(Auto2[, 1:8], range)\nsapply(Auto2[, 1:8], mean)\nsapply(Auto2[, 1:8], sd)\n\nhead(Auto)\npairs(Auto)\nplot(Auto$mpg,Auto$cylinders)\nplot(Auto$mpg, Auto$weight)\n\npairs(Auto)",
+    "created" : 1443077891481.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1578597756",
+    "id" : "F702B967",
+    "lastKnownWriteTime" : 1443114580,
+    "path" : "~/codes/R/hw4/9.R",
+    "project_path" : "9.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

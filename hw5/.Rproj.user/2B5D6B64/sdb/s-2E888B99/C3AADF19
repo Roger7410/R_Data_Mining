@@ -1,0 +1,18 @@
+{
+    "contents" : "library(MASS)\nlibrary(ISLR)\nhead(Carseats)\nfit<-lm(Sales~Price+Urban+US,data=Carseats)\nsummary(fit)\nattach(Carseats)\ncontrasts(US)\ncontrasts(Urban)\n?Carseats\nfit<-lm(Sales~Price+US,data=Carseats)\nsummary(fit)\nconfint(fit,level=0.95)\npar(mfrow=c(2,2))\nplot(fit)\n",
+    "created" : 1444171179813.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3944297266",
+    "id" : "C3AADF19",
+    "lastKnownWriteTime" : 1444193332,
+    "path" : "~/codes/R/hw5/10.R",
+    "project_path" : "10.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

@@ -1,0 +1,17 @@
+{
+    "contents" : "#hw2-4a\nmeans9<-rep(NA,1000)\nfor (i in 1:1000){\n  samp9<-rnorm(9,50,12) \n  means9[i]<-mean(samp9)\n}\nleft9<-means9-1.96*12/3\nright9<-means9+1.96*12/3\ndf<-data.frame(l.end=left9,r.end=right9)\nhead(df)\nsummary(df)\n#hw2-4b\npercentage<-sum(df$l.end<50 & df$r.end>50)/1000 #%95\n",
+    "created" : 1442296980480.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2164317001",
+    "id" : "4D1CA6AD",
+    "lastKnownWriteTime" : 1441856914,
+    "path" : "~/codes/R/hw2p/hw2-4.R",
+    "project_path" : null,
+    "properties" : {
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

@@ -1,0 +1,18 @@
+{
+    "contents" : "# (a)\nlibrary(MASS)\n?Boston\ndim(Boston)\nhead(Boston)\n\npairs(Boston)\n\npar(mfrow=c(1,3))\nBoston$ptratio\nhist(Boston$crim[Boston$crim>1], breaks=25)\nhist(Boston$tax, breaks=25)\nhist(Boston$ptratio, breaks=25)\n\ndim(subset(Boston, chas == 1))\nsum(Boston$chas == 1)\nmedian(Boston$ptratio)\nmedian(Boston$medv)\n\n\nt(subset(Boston, medv == min(Boston$medv)))\nsubset(Boston, medv == min(Boston$medv))\n\ndim(subset(Boston, rm > 7))\ndim(subset(Boston, rm > 8))\nsummary(subset(Boston, rm > 8))\nsummary(Boston)\n\ndim(subset(Boston, rm > 7))\ndim(subset(Boston, rm > 8))\nsummary(subset(Boston, rm > 8))\nsummary(Boston)",
+    "created" : 1443080611180.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2816843247",
+    "id" : "435D096D",
+    "lastKnownWriteTime" : 1443112199,
+    "path" : "~/codes/R/hw4/10.R",
+    "project_path" : "10.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

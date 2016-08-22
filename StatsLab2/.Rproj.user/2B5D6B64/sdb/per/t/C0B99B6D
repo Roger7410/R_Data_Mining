@@ -1,0 +1,17 @@
+{
+    "contents" : "n<-c(2,3,5)\ns<-c(\"aa\",\"bb\",\"Cc\")\nb<-c(T,F,F)\ndf<-data.frame(n,s,b)\nmtcars\nhead(mtcars)\nhelp(mtcars)\n\nx<-rnorm(100)\ny<-rnorm(100)\nz<-sample(c(\"A\",\"B\",\"C\"),size=100,replace=T,prob=c(.4,.3,.3))\ndf<-data.frame(x,y,z)\ndf\nhead(df)\ncolnames(df)<-c(\"col1\",\"col2\",\"name\")\ndf$col1\nhead(df$col1)\nhist(df$col1)\ndf[1:6,]\ndf[1,3]\ndf[1:6,1:2]\nsummary(df)\ndf[df$name==\"A\",1:3]\ndf[df$col1<0,]\ndf$col1<0 & df$col2>0\nx<-data.frame(col1=5,col2=7,name=\"Dave\")\nhead(df)\ndf\ndf<-rbind(df,x)\ndf\ncrazy<-rnorm(101,11,2)\ndf<-cbind(df,crazy)\ndf\n",
+    "created" : 1442305035712.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "764526047",
+    "id" : "C0B99B6D",
+    "lastKnownWriteTime" : 1441707614,
+    "path" : "~/codes/R/fundamental/df.R",
+    "project_path" : null,
+    "properties" : {
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

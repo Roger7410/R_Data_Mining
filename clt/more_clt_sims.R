@@ -1,0 +1,16 @@
+means10<-rep(NA,10000)
+means20<-rep(NA,10000)
+means80<-rep(NA,10000)
+  for (i in 1:10000){
+  samp10<-rexp(10,rate=.25)  
+  samp20<-rexp(20,rate=.25)
+  samp80<-rexp(80,rate=.25)
+  means10[i]<-mean(samp10)
+  means20[i]<-mean(samp20)
+  means80[i]<-mean(samp80)
+}
+par(mfrow=c(2,2))
+hist(rexp(10000,rate=.25),breaks=50,xlim=c(0,8))
+hist(means10,breaks=50,xlim=c(0,8))
+hist(means20,breaks=50,xlim=c(0,8))
+hist(means80,breaks=50,xlim=c(0,8))

@@ -1,0 +1,18 @@
+{
+    "contents" : "college<-read.csv(\"College.csv\",header=T,na.strings =\"?\")\nhead(college)\nrownames(college)<-college[,1]\nfix(college)\ncollege=college[,-1]\nfix(college)\nhead(college)\nsummary(college)\n\npairs(~Apps+Accept+Enroll+Top10perc+Top25perc+F.Undergrad+P.Undergrad+Outstate+Room.Board,college)\npairs(college[,1:10])\nhead(college,10)\nplot(college$Private, college$Outstate)\nplot(college$Outstate, college$Private)\nplot(Private,Outstate)\n\nElite=rep(\"No\",nrow(college))\nElite[college$Top10perc >50]=\"Yes\"\nElite=as.factor(Elite)\ncollege=data.frame(college ,Elite)\nsummary(college$Elite)\nplot(college$Elite, college$Outstate)\n\npar(mfrow=c(2,2))\nhist(Expend,breaks=50)\nhist(Apps,col=2)\nhist(Accept)\nhist(Outstate)\n\nhead(college)\nmean(Accept/Apps)\nmean(Enroll/Accept)\nplot(Top25perc,Grad.Rate)\n\n\n\n\n\n",
+    "created" : 1443040990797.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3047062605",
+    "id" : "FB61713C",
+    "lastKnownWriteTime" : 1443112244,
+    "path" : "~/codes/R/hw4/8.R",
+    "project_path" : "8.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

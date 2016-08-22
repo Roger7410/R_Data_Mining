@@ -1,0 +1,18 @@
+{
+    "contents" : "#stats lab2\n#1\ntb<-scan(\"tb_react.data\")\nqqnorm(tb)#linely\n#hist(tb,breaks=20)\nmean(tb)\ns_tb<-sqrt(sum(tb^2)/(334-1))\nt.test(tb,mu=0) #assume there are giving the same readings,\n                #p-value = 1.11e-13, so reject(different readings)\n\n#2\nsamp10<-rnorm(10,50,7)\nt.test(samp10,mu=50)\nt.test(samp10,mu=51)\nt.test(samp10,mu=49)\n\n#3\ndf<-data.frame(l_end=numeric(0),r_end=numeric(0),t_stat=numeric(0),p_value=numeric(0),result=logical(0))\n#head(df)\n#x<-data.frame(l_end=1,r_end=7,t_stat=1,p_value=0.2,result=T)\n#df<-rbind(df,x)\n#head(df)\nfor(i in 1:1000){\n  samp10<-rnorm(10,50,7)\n  result<-t.test(samp10,mu=50,conf.level = .95)\n  #result\n  t.stat<-result[1]$statistic\n  p.val<-result[3]$p.value\n  l.end<-result[4]$conf.int[1]\n  r.end<-result[4]$conf.int[2]\n  rult<-F\n  if(p.val>0.05){\n    rult<-T\n  }\n  x<-data.frame(l_end=l.end,r_end=r.end,t_stat=t.stat,p_value=p.val,result=rult)\n  df<-rbind(df,x)\n}\nhead(df)\nsum(df$result==TRUE)\n\n#3. again\nveca<-rnorm(10000,11,3)\nvecb<-rnorm(10000,3,4)\nveca_b<-veca-vecb\nhist(veca_b)\nmean(veca_b)\nsd(veca_b)\n\n#4\nvecaa<-rnorm(10000,10,3)\nvecbb<-rnorm(10000,3,8)\nvecca_b<-vecaa-vecbb\nhist(vecca_b)\nmean(vecca_b)\nsd(vecca_b)\n3*3+8*8\nsqrt(73)\n\nvecapb<-veca+vecb\nhist(vecapb)\nmean(vecapb)\nsd(vecapb)\n\nvecappb<-vecaa+vecbb\nhist(vecappb)\nmean(vecappb)\nsd(vecappb)\n\n#5\n",
+    "created" : 1441909256518.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1665618910",
+    "id" : "EF26F48",
+    "lastKnownWriteTime" : 1442459387,
+    "path" : "~/codes/R/hw3/hw3-1.R",
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "type" : "r_source"
+}
